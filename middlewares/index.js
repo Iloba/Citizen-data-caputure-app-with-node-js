@@ -1,0 +1,1 @@
+exports.handleUpload = require('./handleUpload');
