@@ -35,7 +35,7 @@ const saveCitizen = async (req, res, next) => {
       .required()
       .messages({
         "string.pattern.base":
-          "Utility Bill must be a valid image file with jpg, jpeg, or png extension.",
+          "Utility Bill must be a valid image file: jpg, jpeg, or png.",
       }),
     dependants: Joi.array().items(Joi.string()).required(),
   });
@@ -46,7 +46,7 @@ const saveCitizen = async (req, res, next) => {
 
   if (error) {
     throw new Error(error);
-    console.log(error);
+    // console.log(error);
   }
 
   //upload image using multer; (done)
@@ -55,11 +55,8 @@ const saveCitizen = async (req, res, next) => {
 
   //store data
 
-
   //upload images
   //send email to citizen
-
-
 
   //save citizen to database
   const citizen = new Citizen();
